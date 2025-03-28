@@ -11,15 +11,32 @@
 <body>
     <!-- header  -->
     <div class="header">
-        <div id="book-info" >
+        <div id="book-info">
             <img id="book-icon" src="https://cdn-icons-png.flaticon.com/512/2784/2784539.png" alt="bookshub"
                 width="80px" height="80px">
             <p id="header-title">BooksHub</p>
         </div>
-        <div style=" width: 100%; display: flex; justify-content: center;padding:10px; align-items: center;">
-        <input id="search" type="text" placeholder="Search Book by title and author">
+        <div class="search-container">
+            <input id="search" type="text" placeholder="Search Book by title and author">
+        </div>
+        <div class="view-controls">
+            <select id="dropdown" class="dropdown">
+                <option value="sortby" selected disabled>Sort by</option>
+                <option value="atoz">A-Z</option>
+                <option value="date">Date</option>
+            </select>
+            <button id="view-toggle" onclick="toggleView()">
+                <img src="https://cdn-icons-png.flaticon.com/512/3603/3603069.png" width="20px" height="20px"
+                    alt="view toggle">
+            </button>
+        </div>
     </div>
+
+    <div class="books-container grid-view">
+        <!-- Books Items -->
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
